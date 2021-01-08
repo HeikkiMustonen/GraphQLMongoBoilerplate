@@ -8,10 +8,7 @@ This project is a small example of GraphQl server connected to MongoDB. Use as a
 
 - **Important!** You need to create config.sys file for your setting, before anything works! That file is not included and it is initially ignored in .gitignore
 
-## how to start
-
-
-## congif.js 
+## config.js 
 
 When pulled, you need to **create file called 'config.js' to the root**. It stores all the configuration data for whole project.
 Config.js is in .gitignore because it will contain your personal settings. It will not push to your repository unless you edit .gitignore.
@@ -56,6 +53,7 @@ install babel presets.
 Create file called babel.config.json
 This file is configurations for babel and is needed for babel to work.
 put this json in that file:
+
 ```
 {
   "presets": ["@babel/preset-env"]
@@ -63,6 +61,7 @@ put this json in that file:
 ```
 
 Add this start script into package.json
+
 ```
   "scripts": {
     "start": "nodemon --exec babel-node -- ./src/graphqlserver.js"
