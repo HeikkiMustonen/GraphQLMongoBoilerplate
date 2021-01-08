@@ -1,3 +1,17 @@
+NOTE! 
+
+When pulled, you need to create a config.js in the root file that stores all the configuration data. 
+
+config.js
+
+var config = {};
+
+config.expressListeningPort = 4000;
+config.mongoConnectionString = 'mongodb://<YOURUSERNAME>:<YOURPASSWORD>@192.168.1.5:27017/?authSource=admin&authMechanism=SCRAM-SHA-256&readPreference=primary&appname=MongoDB%20Compass&ssl=false';
+
+module.exports = config;
+
+
 SETUP APOLLO and EXPRESS
 ------------------------
 
