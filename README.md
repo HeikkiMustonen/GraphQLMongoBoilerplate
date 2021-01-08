@@ -35,7 +35,7 @@ module.exports = config;
 
 ## Setting up from srcatch.
 
-SETUP APOLLO and EXPRESS
+#####SETUP APOLLO and EXPRESS
 ------------------------
 
 $ `npm install -g npm`
@@ -90,9 +90,9 @@ if everything is ok, server should be running.
 
 ...video about this : https://www.youtube.com/watch?v=YFkJGEefgU8
 
-SETUP MONGOOSE and MONGOBD connection
+#####SETUP MONGOOSE and MONGOBD connection
 ----------------------
 
-$ `npm install mongoose
+$ `npm install mongoose`
 to install mongoose!
 
