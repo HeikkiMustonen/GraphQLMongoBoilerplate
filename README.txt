@@ -1,6 +1,6 @@
 NOTE! 
 
-When pulled, you need to create a config.js in the root file that stores all the configuration data. 
+When pulled, you need to create a config.js in the root. It stores all the configuration data for whole server. 
 
 config.js
 
