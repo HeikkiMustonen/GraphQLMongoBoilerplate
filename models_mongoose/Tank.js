@@ -1,3 +1,4 @@
 import { Mongoose } from "mongoose";
+import mongoose from "mongoose"
 
-export const Tank = Mongoose.model("Tank", { name: String});
+export const Tank = mongoose.model("Tank", { name: String});

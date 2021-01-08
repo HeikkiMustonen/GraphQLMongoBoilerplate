@@ -1,4 +1,4 @@
-import { ApolloServer, gql } from "apollo-server-express";
+import {ApolloServer,gql} from "apollo-server-express";
 import express from "express";
 import mongoose from "mongoose";
 import typeDefs from "../models_mongoose/typeDefs.js";
@@ -11,7 +11,7 @@ const StartServer = async () =>{
     //connect to mongoose
     if(Myconfig.mongoConnectionString !== ''){
       //lets wait for mongoDB to connect and respond...
-     await mongoose.connect(Myconfig.mongoConnectionString)
+     await mongoose.connect(Myconfig.mongoConnectionString, Myconfig.mongooseConnectionOptions)
     }
     else{
       console.warn('there is no mongo connection string given in config.js')
