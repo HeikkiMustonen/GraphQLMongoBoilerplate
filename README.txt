@@ -1,4 +1,4 @@
-SETUP
+SETUP APOLLO and EXPRESS
 ------------------------
 
 $ npm install -g npm
@@ -46,5 +46,9 @@ $npm start
 if everything is ok, server should be running.
 
 ...video about this : https://www.youtube.com/watch?v=YFkJGEefgU8
+
+SETUP MONGOOSE and MONGOBD connection
 ----------------------
+
+
 
