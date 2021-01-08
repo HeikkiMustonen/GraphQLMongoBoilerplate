@@ -23,7 +23,7 @@ var config = {};
 config.expressListeningPort = 4000;
 config.mongoConnectionString = 'mongodb://<YOURUSERNAME>:<YOURPASSWORD>@192.168.1.5:27017/<DATABASE>?authSource=admin&authMechanism=SCRAM-SHA-256&readPreference=primary&appname=MongoDB%20Compass&ssl=false';
 
-//There option are for mongoose connection
+//These option are for mongoose connection
 //more info at https://mongoosejs.com/docs/connections.html
 config.mongooseConnectionOptions= {
     useNewUrlParser: true,
