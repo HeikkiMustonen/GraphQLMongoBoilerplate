@@ -1,2 +1,5 @@
 node_modules
+#you need to create config.js for this project
+#check readme
+#it will be ignored since it hold sensitive stuff...
 /config.js
