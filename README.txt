@@ -50,5 +50,6 @@ if everything is ok, server should be running.
 SETUP MONGOOSE and MONGOBD connection
 ----------------------
 
-
+$ npm install mongoose
+to install mongoose!
 
