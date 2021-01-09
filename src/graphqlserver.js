@@ -5,6 +5,7 @@ import typeDefs from "../models_mongoose/typeDefs.js";
 import resolvers from "../models_mongoose/resolvers.js";
 
 //note! chech that config.js is actually filled and exists.
+//you need this file...
 import Myconfig from "../config.js";
 
 const StartServer = async () =>{
