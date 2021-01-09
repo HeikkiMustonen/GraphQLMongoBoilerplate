@@ -14,7 +14,7 @@ const StartServer = async () =>{
      await mongoose.connect(Myconfig.mongoConnectionString, Myconfig.mongooseConnectionOptions)
     }
     else{
-      console.warn('there is no mongo connection string given in config.js')
+      console.warn('there is no mongo connection string given in config.js.')
     }
 
     // Provide resolver functions for your schema fields

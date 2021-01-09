@@ -5,6 +5,7 @@ This project is a small example of GraphQl server connected to MongoDB. Use as a
 - **There is no MongoDB included!** You need to have MongoDB up and runing somewhere. You will need a connection string for that DB.
 - Using Apollo, express and mongoose.
 - at the end of this readme, there is a quick note how to set up npm packages for development. Not needed, but it is there.
+- Dockerfile included
 
 - **Important!** You need to create config.sys file for your setting, before anything works! That file is not included and it is initially ignored in .gitignore
 
