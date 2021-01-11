@@ -4,6 +4,10 @@ FROM node:latest
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
 
+#install psmisc and net-tools for finding / killing ports etc
+RUN ["apt-get","install","net-tools"]
+RUN ["apt-get","install","psmisc"]
+
 RUN mkdir /graphqlserver/
 
 WORKDIR /graphqlserver/
