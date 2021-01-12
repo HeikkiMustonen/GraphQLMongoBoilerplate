@@ -33,6 +33,14 @@ config.mongooseConnectionOptions= {
 
 module.exports = config;
 ```
+## Dockerfile
+
+Image created from this Dockerfile has there installed:
+
+- debian with node
+- vim 
+- net-tools
+- psmisc
 
 ## Setting up from srcatch.
 
