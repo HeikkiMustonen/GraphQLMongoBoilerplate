@@ -4,15 +4,16 @@ import mongoose from "mongoose";
 import typeDefs from "../models_mongoose/typeDefs.js";
 import resolvers from "../models_mongoose/resolvers.js";
 
-//note! chech that config.js is actually filled and exists.
-//you need this file...
-import Myconfig from "../config.js";
+require('dotenv').config()
 
 const StartServer = async () =>{
     //connect to mongoose
-    if(Myconfig.mongoConnectionString !== ''){
+    let mongoConnectionsString = process.env.MONGOCONNECTIONSTRING
+    let mongooseConnectionOptions = process.env.MONGOOSECONNECTIONOPTIONS
+    if(true){
       //lets wait for mongoDB to connect and respond...
-     await mongoose.connect(Myconfig.mongoConnectionString, Myconfig.mongooseConnectionOptions)
+    console.log(process.env.MONGOCONNECTIONSTRING);
+     await mongoose.connect(process.env.MONGOCONNECTIONSTRING)
     }
     else{
       console.warn('there is no mongo connection string given in config.js.')
@@ -25,9 +26,9 @@ const StartServer = async () =>{
     const app = express();
     server.applyMiddleware({ app });
 
-    app.listen({ port: Myconfig.expressListeningPort }, () =>
+    app.listen({ port: 4000 }, () =>
       
-      console.log(`🚀 Server ready at http://localhost:${Myconfig.expressListeningPort}${server.graphqlPath}`)
+      console.log(`🚀 Server ready at http://localhost:${server.graphqlPath}`)
     );
 }
 
