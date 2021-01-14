@@ -9,27 +9,28 @@ require('dotenv').config()
 const StartServer = async () =>{
     //connect to mongoose
     let mongoConnectionsString = process.env.MONGOCONNECTIONSTRING
-    let mongooseConnectionOptions = process.env.MONGOOSECONNECTIONOPTIONS
-    if(true){
+    let port  = process.env.PORT
+    if(mongoConnectionsString){
       //lets wait for mongoDB to connect and respond...
-    console.log(process.env.MONGOCONNECTIONSTRING);
-     await mongoose.connect(process.env.MONGOCONNECTIONSTRING)
+ 
+     await (await mongoose.connect(mongoConnectionsString, { useNewUrlParser: true,  useUnifiedTopology: true}))
+   
     }
     else{
-      console.warn('there is no mongo connection string given in config.js.')
+      console.warn('there is no mongo connection string given in .ENV')
     }
 
     // Provide resolver functions for your schema fields
-
     const server = new ApolloServer({ typeDefs, resolvers });
 
     const app = express();
     server.applyMiddleware({ app });
 
-    app.listen({ port: 4000 }, () =>
+    app.listen({ port: port }, () =>{
       
-      console.log(`🚀 Server ready at http://localhost:${server.graphqlPath}`)
-    );
+      console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`)
+       
+    });
 }
 
 StartServer();
