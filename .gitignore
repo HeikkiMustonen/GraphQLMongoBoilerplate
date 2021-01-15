@@ -3,3 +3,4 @@ node_modules
 #check readme
 #it will be ignored since it hold sensitive stuff...
 /config.js
+/.ENV
