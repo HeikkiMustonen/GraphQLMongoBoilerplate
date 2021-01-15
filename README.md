@@ -7,32 +7,20 @@ This project is a small example of GraphQl server connected to MongoDB. Use as a
 - at the end of this readme, there is a quick note how to set up npm packages for development. Not needed, but it is there.
 - Dockerfile included
 
-- **Important!** You need to create config.sys file for your setting, before anything works! That file is not included and it is initially ignored in .gitignore
+- **Important!** You need to create .ENV file for your setting, before anything works! That file is not included and it is initially ignored in .gitignore
 
-## config.js 
+## .ENV 
 
-When pulled, you need to **create file called 'config.js' to the root**. It stores all the configuration data for whole project.
-Config.js is in .gitignore because it will contain your personal settings. It will not push to your repository unless you edit .gitignore.
+When cloned, you need to **create a file called '.ENV' to the root**. It stores all the configuration data for whole project.
+.ENV is in .gitignore because it will contain your personal settings. It will not push to your repository unless you edit .gitignore.
 
-After creating config.js, copy and paste the code below into it. 
+After creating .ENV, copy and paste the code below into it. 
 **You must replace connection string at mongoConnectingString**.  
 
 config.js
 ```
-var config = {};
-
-config.expressListeningPort = 4000;
-config.mongoConnectionString = 'mongodb://<YOURUSERNAME>:<YOURPASSWORD>@192.168.1.5:27017/<DATABASE>?authSource=admin&authMechanism=SCRAM-SHA-256&readPreference=primary&appname=MongoDB%20Compass&ssl=false';
-
-//These option are for mongoose connection
-//more info at https://mongoosejs.com/docs/connections.html
-
-config.mongooseConnectionOptions= {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-};
-
-module.exports = config;
+MONGOOSECONNECTIONSRING='mongodb://<USERNAME>:<PASSWORD>@<IP>:<PORT>/<DB_NAME>?authSource=admin&authMechanism=SCRAM-SHA-256&readPreference=primary&appname=MongoDB%20Compass&ssl=false'
+PORT=4000 
 ```
 ## Dockerfile
 

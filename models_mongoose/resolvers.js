@@ -3,7 +3,6 @@ const { Tank } = require("./Tank");
 
 const resolvers = {
     Query: {
-      hello: () => 'Hello world!',
       //try in playground {getAllTanks{id, name}}
       getAllTanks: () => Tank.find()
     },
