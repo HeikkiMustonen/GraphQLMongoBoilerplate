@@ -8,16 +8,21 @@ import colors from "colors";
 
 require('dotenv').config()
 
+function fileExists(pathToFile){
+  try{
+    fs.accessSync(pathToFile,fs.constants.R_OK);
+    return true;
+  }
+  catch{
+    return false;
+  }
+  
+}
+
 const StartServer = async () =>{
     //Checks for .ENV file
-    fs.access('./.ENV',0, (err) => {
-      if(err){
-        console.log(".ENV not found! You need to create one...".red)
-      }else{
-        console.log(".ENV file found!".green)
-      }
-    })
-
+    fileExists('./.ENV') ? console.log(".ENV file found!".green) : console.log(".ENV not found! You need to create one...".red); 
+    
     let mongoConnectionsString = process.env.MONGOCONNECTIONSTRING
     let port  = process.env.PORT
     
