@@ -8,6 +8,10 @@ RUN ["apt-get", "install", "-y", "vim"]
 RUN ["apt-get","install","net-tools"]
 RUN ["apt-get","install","psmisc"]
 
+#You can setup your environmental variables here
+#ENV PORT=4000
+#ENV MONGOCONNECTIONSTRING=
+
 RUN mkdir /graphqlserver/
 
 WORKDIR /graphqlserver/
